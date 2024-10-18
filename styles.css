@@ -126,6 +126,11 @@ main {
     align-items: center;
     text-align: center;
     border: 1px solid;
+    border-radius: 15px;
+}
+ .proyect img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .proyect a {
@@ -135,6 +140,8 @@ main {
     color: #daf1ff;
     background-color: #0D2A3F;
     padding: 0.5rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 @media (min-width: 1300px) {
