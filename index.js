@@ -1,3 +1,5 @@
+// Fetching Proyects and Creating Elements
+
 const contenedor = document.querySelector(".contenedor");
 
 async function getProjects() {
@@ -27,6 +29,8 @@ getProjects().then(data => {
   })
 })
 
+// Fetching SocialMedia and Creating Elements
+
 const links = document.querySelector(".links")
 
 async function getRedes() {
@@ -38,7 +42,6 @@ async function getRedes() {
 
 getRedes().then(data => {
   data.forEach(red => {
-    console.log(red)
     const a = document.createElement("a")
     a.id = "profile-link";
     a.href = red.link;
@@ -53,9 +56,9 @@ getRedes().then(data => {
   })
 })
 
+// Copying Email to Clipboard
 
 async function copyToClipboard() {
-  // Seleccionar el texto dentro del elemento de correo electrónico
   const emailElement = document.getElementById("email");
   const emailText = emailElement.textContent || emailElement.innerText;
  
