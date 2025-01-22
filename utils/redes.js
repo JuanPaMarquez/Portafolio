@@ -1,5 +1,4 @@
-{
-  "redes": [
+const redes = [
   {
     "nombre": "Facebook",
     "link": "https://www.facebook.com/JuanPabloMS18",
@@ -25,5 +24,4 @@
     "link": "mailto:juan013sanchez@gmail.com",
     "icon": "fas fa-at"
   }
-  ]
-}
+]

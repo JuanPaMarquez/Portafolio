@@ -2,58 +2,40 @@
 
 const contenedor = document.querySelector(".contenedor");
 
-async function getProjects() {
-  const listarProyectos = await fetch("utils/proyectos.json")
-    .then(response => response.json())
-    .then(data => data.proyectos)
-  return listarProyectos;
-}
+proyectos.forEach(proyecto => {
+  const div = document.createElement("div");
+  div.classList.add("proyect");
 
-getProjects().then(data => {
-  data.forEach(proyecto => {
-    const div = document.createElement("div");
-    div.classList.add("proyect");
+  const img = document.createElement("img");
+  img.src = proyecto.img;
 
-    const img = document.createElement("img");
-    img.src = proyecto.img;
-
-    const a = document.createElement("a");
-    a.classList.add("project-tile");
-    a.href = proyecto.link;
-    a.innerText = proyecto.titulo;
-    a.target = "_blank";
-    
-    div.appendChild(img);
-    div.appendChild(a);
-    contenedor.appendChild(div);
-  })
+  const a = document.createElement("a");
+  a.classList.add("project-tile");
+  a.href = proyecto.link;
+  a.innerText = proyecto.titulo;
+  a.target = "_blank";
+  
+  div.appendChild(img);
+  div.appendChild(a);
+  contenedor.appendChild(div);
 })
 
 // Fetching SocialMedia and Creating Elements
 
 const links = document.querySelector(".links")
 
-async function getRedes() {
-  const listarRedes = await fetch("utils/redes.json")
-    .then(response => response.json())
-    .then(data => data.redes)
-  return listarRedes;
-}
+redes.forEach(red => {
+  const a = document.createElement("a")
+  a.id = "profile-link";
+  a.href = red.link;
+  a.target = "_blank";
 
-getRedes().then(data => {
-  data.forEach(red => {
-    const a = document.createElement("a")
-    a.id = "profile-link";
-    a.href = red.link;
-    a.target = "_blank";
+  const i = document.createElement("i");
+  i.className = red.icon
+  i.innerText = " " + red.nombre;
 
-    const i = document.createElement("i");
-    i.className = red.icon
-    i.innerText = " " + red.nombre;
-
-    a.appendChild(i);
-    links.appendChild(a);
-  })
+  a.appendChild(i);
+  links.appendChild(a);
 })
 
 // Copying Email to Clipboard
