@@ -1,3 +1,6 @@
+import { redes } from "./utils/redes.js";
+import { proyectos } from "./utils/proyectos.js"
+
 // Fetching Proyects and Creating Elements
 
 const contenedor = document.querySelector(".contenedor");
@@ -10,7 +13,7 @@ proyectos.forEach(proyecto => {
   imgInfo.classList.add("img-info");
 
   const img = document.createElement("img");
-  img.src = proyecto.img;
+  img.src = proyecto.img
 
   const barraBotones = document.createElement("div")
   barraBotones.classList.add("barra-botones")

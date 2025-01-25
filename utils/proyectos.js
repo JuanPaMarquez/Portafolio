@@ -1,4 +1,4 @@
-const proyectos = [
+export const proyectos = [
   {
     "titulo": "Buscar Peliculas",
     "img": "https://lh3.googleusercontent.com/pw/AP1GczNa0lFIMZeaerQx1pMdavJk5LCIQlus5d41_A4uPkBgzlmkDyaOF5Ehm7Qd7TSuZpUWEbzY48fQs0L4Ih-bHIBFCPi-xNNSs7YfH-W7N2xVmlLkVw-D5Z4XPcr75mDRN197ylU7o6DXVzJVH9WInMLi=w830-h640-rw-s-no-gm?authuser=0",

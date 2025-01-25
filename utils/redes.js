@@ -1,4 +1,4 @@
-const redes = [
+export const redes = [
   {
     "nombre": "Facebook",
     "link": "https://www.facebook.com/JuanPabloMS18",
