@@ -4,14 +4,14 @@
     scroll-behavior: smooth;
 }
 
-img {
-    width: 352px;
-    height: 300px;
-}
-
 body {
     margin: 0;
     background: #0D2A3F; /*#1B537F*/
+}
+
+img {
+    width: 352px;
+    height: 300px;
 }
 
 nav {
